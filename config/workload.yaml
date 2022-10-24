@@ -1,0 +1,23 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: server-side-ui-starter
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    app.kubernetes.io/part-of: server-side-ui-starter
+    apps.tanzu.vmware.com/has-tests: true
+spec:
+  build:
+    env:
+      - name: BP_JVM_VERSION
+        value: "11"
+  params:
+    - name: annotations
+      value:
+        autoscaling.knative.dev/minScale: "1"
+  source:
+    git:
+      url: https://github.com/alexabraham2/java-server-side-ui.git
+      ref:
+        branch: main
+    subPath: server-side-ui-starter
