@@ -1,3 +1,4 @@
+#SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='tapacr.azurecr.io/aa-tap-ekscluster/java-server-side-ui')
 SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='dev.local/server-side-ui-starter-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
@@ -21,4 +22,4 @@ k8s_custom_deploy(
 )
 
 k8s_resource('server-side-ui-starter', port_forwards=["8080:8080"],
-            extra_pod_selectors=[{'serving.knative.dev/service': 'server-side-ui-starter'}])
+            extra_pod_selectors=[{'serving.knative.dev/service': 'server-side-ui-starter'}])           
