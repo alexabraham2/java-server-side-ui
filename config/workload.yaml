@@ -5,7 +5,7 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: server-side-ui-starter
-#    apps.tanzu.vmware.com/has-tests: true
+    apps.tanzu.vmware.com/has-tests: true
 spec:
   build:
     env:
@@ -15,6 +15,14 @@ spec:
     - name: annotations
       value:
         autoscaling.knative.dev/minScale: "1"
+    - name: api_descriptor
+      value:
+       type: openapi
+       location:
+         path: "/v3/api-docs"
+       system: tsunamis
+       owner: team-tsunamis
+       description: "Java web ui, openapi is not relevant."
   source:
     git:
       url: https://github.com/alexabraham2/java-server-side-ui.git
