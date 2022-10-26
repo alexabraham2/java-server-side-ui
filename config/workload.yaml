@@ -15,14 +15,6 @@ spec:
     - name: annotations
       value:
         autoscaling.knative.dev/minScale: "1"
-    - name: api_descriptor
-      value:
-       type: openapi
-       location:
-         path: "/v3/api-docs"
-       system: tsunamis
-       owner: team-tsunamis
-       description: "Java web ui, openapi is not relevant."
   source:
     git:
       url: https://github.com/alexabraham2/java-server-side-ui.git
