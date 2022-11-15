@@ -1,3 +1,7 @@
+
+
+![plot](./supplychain.png)
+
 Development Team 
 
 - Download code from Accelerator 
@@ -7,8 +11,7 @@ Development Team
 
 Ops Team 
 
-- Validate Existing SupplyChain 
-- Run the workload yaml 
+- Create workload object  
 - Watch Supplychain execution using UI and with Kubectl
 
 Security Team
