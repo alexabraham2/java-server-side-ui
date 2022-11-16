@@ -29,7 +29,7 @@ class IndexControllerTest {
                             .accept(MediaType.TEXT_HTML))
                     .andExpect(status().isOk())
                     .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-                    .andExpect(content().string(containsString("Welcome to TAP DEMO Level 200")));
+                    .andExpect(content().string(containsString("Welcome to Bash Event")));
         }
     }
 }
